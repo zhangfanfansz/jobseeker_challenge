@@ -13,12 +13,12 @@
 ## Start Step
 * start rails server 
 
-* **JobMatchService**
+## JobMatchService
 1. The data has been imported through the seed file
 2. To generate the job match results report, open the Rails console and run `JobMatchService.new.generate_report`
 3. The report will be generated and saved as `job_match_report.csv` in the root directory of your project
 
-* **Rspec Test**
+## Rspec Test
 * run `rspec`, the coverage report will be generated in `coverage/index.html`
 
 ## Note
