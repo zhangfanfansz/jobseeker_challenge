@@ -1,0 +1,15 @@
+!!!
+%html{:lang => "en"}
+  %head
+    = render 'layouts/head'
+
+  %body{ class: "rails-template #{controller.controller_name}-#{controller.action_name}" }
+    #side-nav-offcanvas.off-canvas.position-right{"data-off-canvas": ""}
+      = render 'sidenav'
+    .off-canvas-content{"data-off-canvas-content": ""}
+      = render 'global_notice'
+      .show-for-medium= render 'sidenav'
+      = render 'header'
+      #main
+        = yield
+        = render 'footer'

@@ -1,0 +1,4 @@
+- if flash.any?
+  .global-notice-wrapper
+    - flash.each do |name, msg|
+      .global-notice-carrier{data: {"type": name, "content": msg}}

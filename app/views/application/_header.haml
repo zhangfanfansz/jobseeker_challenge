@@ -1,0 +1,10 @@
+%header.rails-template-header
+  .header-left
+    .logo-area
+      = link_to root_path do
+        = image_path("logo-on_white.png")
+  .header-right
+    .show-for-small-only 
+      %a.mobile-sidenav-handle{"data-toggle": "side-nav-offcanvas"}
+        %i.fas.fa-bars
+

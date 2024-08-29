@@ -1,0 +1,69 @@
+- current_nav = controller.action_name.gsub(/\/.*$/,'')
+
+
+.sidenav.rails-template-sidenav
+  .sidenav-header.show-for-small-only
+    .header-left
+      .logo-area
+        = link_to root_path do
+          = image_path("logo-on_white.png")
+    .header-right
+      %a.icon-button.icon-close{href: "javascript:;", "data-close": ""}
+
+  %ul.vertical.menu.accordion-menu{"data-accordion-menu" => ""}
+    %li
+      %a
+        .list-icon
+          %i.fas.fa-book-spells
+        %span UI Elements
+      %ul.menu.vertical.nested{class: "#{controller.controller_name == 'pages' ? 'is-active' : ''}"}
+        %li{class: "#{'is-active' if current_nav === 'fonts_page'}"}
+          = link_to pages_fonts_page_path do
+            .list-icon
+              %i.far.fa-font-case
+            %span Fonts
+        %li{class: "#{'is-active' if current_nav === 'spinners_page'}"}
+          = link_to pages_spinners_page_path do
+            .list-icon
+              %i.fad.fa-spinner
+            %span Spinners
+        %li{class: "#{'is-active' if current_nav === 'animations_page'}"}
+          = link_to pages_animations_page_path do
+            .list-icon
+              %i.far.fa-camera-movie
+            %span Animations
+        %li{class: "#{'is-active' if current_nav === 'global_notice_page'}"}
+          = link_to pages_global_notice_page_path do
+            .list-icon
+              %i.far.fa-bell
+            %span Global Notice
+        %li{class: "#{'is-active' if current_nav === 'new'}"}
+          = link_to new_template_model_path do
+            .list-icon
+              %i.far.fa-file-edit
+            %span Form
+        %li
+          %a
+            .list-icon
+              %i.far.fa-table
+            %span Table
+        %li
+          %a
+            .list-icon
+              %i.far.fa-window-restore
+            %span Panel
+        %li
+          %a
+            .list-icon
+              %i.far.fa-hand-point-up
+            %span Button
+        %li
+          %a
+            .list-icon
+              %i.fas.fa-tasks-alt
+            %span Progress Bar
+        %li
+          %a
+            .list-icon
+              %i.far.fa-list-ol
+            %span Pagination

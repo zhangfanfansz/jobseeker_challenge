@@ -1,0 +1,124 @@
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+  Include:
+    - 'app/models/**/*.rb'
+
+Style/SymbolProc:
+  Exclude:
+    - 'config/**/*'
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+Performance/Count:
+  Enabled: false
+
+Rails/TimeZone:
+  Exclude:
+    - 'spec/**/*'
+
+Lint/UselessAccessModifier:
+  Enabled: false
+
+Lint/EmptyWhen:
+  Enabled: false
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+Naming/PredicateName:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/HelperInstanceVariable:
+  Enabled: false
+
+Rails/OutputSafety:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Lint/UselessAssignment:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Rails/ApplicationRecord:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/Present:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/ActiveRecordAliases:
+  Enabled: false
+
+Rails/PluralizationGrammar:
+  Enabled: false
+
+Rails/FindBy:
+  Enabled: false
+
+Rails/Date:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
+
+Lint/UnderscorePrefixedVariableName:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
+Lint/AmbiguousOperator:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Enabled: false
+
+Metrics:
+  Enabled: false
+
+Lint/EmptyFile:
+  Enabled: false
+
+Rails/Output:
+  Enabled: false
+
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+     - 'app/services/job_match_service.rb'
+     - 'db/schema.rb'
+     - 'spec/factories/*'
+     - 'db/migrate/*'
+     - 'bin/*'

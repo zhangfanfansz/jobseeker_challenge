@@ -1,0 +1,12 @@
+%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+%meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+%title Rails Template
+= csrf_meta_tags
+= csp_meta_tag
+= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload"
+= stylesheet_link_tag "application", "data-turbo-track": "reload"
+= javascript_importmap_tags
+/* font-awesome */
+%script{:crossorigin => "anonymous", :src => "https://kit.fontawesome.com/a6b078e18e.js"}
+/* google fonts */
+%link{:href => "https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Open+Sans:300,400,600,700&display=swap", :rel => "stylesheet"}

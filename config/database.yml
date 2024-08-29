@@ -1,0 +1,14 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: fanzhang
+  pool: 5
+
+development:
+  <<: *default
+  database: jobseeker_development
+
+test:
+  <<: *default
+  database: jobseeker_test

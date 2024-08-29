@@ -1,0 +1,90 @@
+.restruct-wrapper
+  .panel
+    .panel-heading
+      .title Form
+    .panel-body
+      %section.display-wrapper
+        .section-title
+          Vertical Form
+        .section-body
+          .demo-wrapper.form-demo
+            = simple_form_for @template_model do |f|
+              .grid-x.grid-margin-x
+                .cell.medium-6
+                  = f.input :first_name, label: 'First Name'
+                .cell.medium-6 
+                  = f.input :last_name, label: 'Last Name', hint: 'This is a hint'
+                .cell.medium-12
+                  = f.input :email, label: 'Email'
+                .cell.medium-6 
+                  = f.input :gender, collection: [['Male', 'male'], ['Female', 'female'], ['Other', 'other']], prompt: true, label: 'Gender'
+                .cell.medium-6 
+                  = f.input :dob, as: :date, html5: true, label: 'Date of Birth'
+                .cell.medium-6 
+                  = f.input :level, as: :radio_buttons, collection: [['Level 1', 1], ['Level 2', 2], ['Level 3', 3]], prompt: true
+                .cell.medium-6 
+                  = f.input :active, as: :boolean, prompt: true, label: 'Set as Active'
+                .cell.medium-12
+                  = f.input :message, as: :text, input_html: {rows: "2"}, hint: 'This is a hint'
+              .grid-x.grid-margin-x.align-right.form-action
+                .cell.medium-shrink
+                  = link_to 'Cancel', new_template_model_path, class: 'button gray hollow'
+                .cell.medium-shrink 
+                  = f.button :submit, 'Save', data: { disable_with: 'Please wait ...' }, class: 'button'
+
+      %section.display-wrapper
+        .section-title
+          Horizontal Form
+        .section-body
+          .demo-wrapper.form-demo
+            = simple_form_for @template_model, wrapper: 'horizontal_form' do |f|
+              .grid-x.grid-margin-x
+                .cell.medium-6
+                  = f.input :first_name, label: 'First Name'
+                .cell.medium-6 
+                  = f.input :last_name, label: 'Last Name', hint: 'This is a hint'
+                .cell.medium-12
+                  = f.input :email, label: 'Email'
+                .cell.medium-6 
+                  = f.input :gender, collection: [['Male', 'male'], ['Female', 'female'], ['Other', 'other']], prompt: true, label: 'Gender'
+                .cell.medium-6 
+                  = f.input :dob, as: :date, html5: true, label: 'Date of Birth'
+                .cell.medium-6 
+                  = f.input :level, as: :radio_buttons, collection: [['Level 1', 1], ['Level 2', 2], ['Level 3', 3]], prompt: true
+                .cell.medium-6 
+                  = f.input :active, as: :boolean, prompt: true, label: 'Set as Active'
+                .cell.medium-12
+                  = f.input :message, as: :text, input_html: {rows: "2"}, hint: 'This is a hint'
+              .grid-x.grid-margin-x.align-right.form-action
+                .cell.medium-shrink
+                  = link_to 'Cancel', new_template_model_path, class: 'button gray hollow'
+                .cell.medium-shrink 
+                  = f.button :submit, 'Save', data: { disable_with: 'Please wait ...' }, class: 'button'
+
+      %section.display-wrapper
+        .section-title
+          Float Label Form
+        .section-body
+          .demo-wrapper.form-demo
+            = simple_form_for @template_model, wrapper: 'float_label_wrapper' do |f|
+              .grid-x.grid-margin-x
+                .cell.medium-6
+                  = f.input :first_name, label: 'First Name'
+                .cell.medium-6 
+                  = f.input :last_name, label: 'Last Name', hint: 'This is a hint'
+                .cell.medium-12
+                  = f.input :email, label: 'Email'
+                .cell.medium-6 
+                  = f.input :gender, collection: [['Male', 'male'], ['Female', 'female'], ['Other', 'other']], prompt: true, label: 'Gender', wrapper_html: {class: 'force-editing'}
+                .cell.medium-6 
+                  = f.input :dob, as: :date, html5: true, label: 'Date of Birth', wrapper_html: {class: 'force-editing'}
+                .cell.medium-12
+                  = f.input :message, as: :text, input_html: {rows: "2"}, hint: 'This is a hint'
+              .grid-x.grid-margin-x.align-right.form-action
+                .cell.medium-shrink
+                  = link_to 'Cancel', new_template_model_path, class: 'button gray hollow'
+                .cell.medium-shrink 
+                  = f.button :submit, 'Save', data: { disable_with: 'Please wait ...' }, class: 'button'
+
+
+      

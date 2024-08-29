@@ -1,0 +1,8 @@
+!!!
+%html{:lang => "en"}
+  %head
+    = render 'layouts/head'
+
+  %body{ class: "consumer #{controller.controller_name}-#{controller.action_name}" }
+    #main
+      = yield
